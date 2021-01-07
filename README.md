@@ -46,7 +46,7 @@ Requirements: Java 11
 
 ```bash
 # clone repository
-git clone https://github.com/fredericoahb/sds.git
+git clone https://github.com/fredericoahb/dsdeliver.git
 
 # change directory to backend project folder
 cd backend
@@ -60,7 +60,7 @@ Requirements: npm / yarn
 
 ```bash
 # clone repository
-git clone https://github.com/fredericoahb/sds.git
+git clone https://github.com/fredericoahb/dsdeliver.git
 
 # change directory to frontend web project folder
 cd front-web
