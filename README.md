@@ -7,6 +7,8 @@
 
 # About this project
 
+https://fred-homobono.netlify.app/
+
 DS Deliver is a full stack web and mobile application.
 
 The application consists of a restaurant ordering and delivery system.
