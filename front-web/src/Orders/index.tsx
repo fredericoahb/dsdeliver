@@ -1,31 +1,27 @@
 import { useEffect, useState } from 'react';
 import { fetchProducts } from '../api';
+import OrderLocation from './OrderLocation';
 import ProductsList from './ProductsList';
 import StepsHeader from './StepsHeader';
 import './styles.css';
-import { Product } from './types';
+import { OrderLocationData, Product } from './types';
 
-function Orders(){
+const Orders = () => {
   const [products, setProducts] = useState<Product[]>([]);
-
-  console.log(products);
-
+  const [orderLocation, setOrderLocation] = useState<OrderLocationData>();
   useEffect(() => {
-    
-    fetchProducts()
-      .then(response => setProducts(response.data))
-      .catch(error => console.log(error))
-
+      fetchProducts()
+          .then(response => setProducts(response.data))
+          .catch(error => console.log(error));
   }, [])
 
-
-  
-  return(
-    <div className="orders-container">
-      <StepsHeader />
-      <ProductsList products={products}/>
-    </div>
-  )
-}
+  return (
+      <div className="orders-container">
+          <StepsHeader />
+          <ProductsList products={products} />
+          <OrderLocation onChangeLocation={location => setOrderLocation(location)} />
+      </div>
+  );
+};
 
 export default Orders;
